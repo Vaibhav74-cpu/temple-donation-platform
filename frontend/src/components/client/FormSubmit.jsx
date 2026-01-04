@@ -62,13 +62,14 @@ function FormSubmit() {
     }
   };
   return (
-    <div className="max-w-7xl flex mx-auto mt-20 justify-between px-20">
-      <div>
+    <div className="max-w-4xl  mx-auto mt-20  px-6">
+     <div className="flex flex-col lg:flex-row gap-28 items-center lg:items-start">
+       <div className="">
         <form
           onSubmit={submitHandler}
-          className="border border-gray-300 bg-white shadow-2xl rounded-xl p-6 m-2 w-full"
+          className="border border-gray-300 bg-white shadow-xl rounded-2xl p-6 max-w-md w-full"
         >
-          <h1 className="font-serif font-semibold ">
+          <h1 className="font-serif font-semibold mb-2">
             Enter your Name & Contact
           </h1>
           <div>
@@ -166,13 +167,14 @@ function FormSubmit() {
           </div>
         </form>
       </div>
-      <div className=" ">
+      <div className="hidden lg:block">
         <img
           src="https://cdn.shopify.com/s/files/1/0815/1000/7089/files/Suryadev-CP104_480x480.jpg?v=1704777997"
           alt="kushmanda"
-          className="w-[28rem] h-[28rem] rounded-xl"
+          className="w-[420px] h-[520px] object-cover rounded-2xl shadow-lg"
         />
       </div>
+     </div>
     </div>
   );
 }

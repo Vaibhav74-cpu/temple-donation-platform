@@ -48,16 +48,16 @@ const images = [
 function PujaHeroSection() {
   return (
     <div>
-      <div>
+      <div className="w-full overflow-hidden">
         <img
-          src="https://assets.answersingenesis.org/img/cms/content/contentnode/header_image/god.jpg "
+          src="https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/HJpjKMlmgiw923pte/videoblocks-silhouette-young-man-praying-outside-at-beautiful-sunset-male-asks-for-help-finding-solace-in-faith-concept-religion_hss1fhph4_thumbnail-1080_02.png "
           alt="Ram Lalla Murti"
-          className="w-full h-[34rem]"
+          className="w-full h-[18rem] sm:h-[24rem]  lg:h-[35rem] object-cover"
         />
       </div>
 
       {/*image card slider */}
-      <div className="flex gap-8 max-w-6xl mx-auto mt-20">
+      <div className="flex flex-col lg:flex-row px-3 gap-8 max-w-6xl mx-auto mt-20">
         <div>
           <Carousel
             opts={{ loop: true }}

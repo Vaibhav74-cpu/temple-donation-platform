@@ -4,19 +4,19 @@ import FormSubmit from "./FormSubmit";
 function DanHeroSection() {
   return (
     <div>
-      <div>
+      <div className="w-full overflow-hidden">
         <img
           src="https://cdn.openart.ai/stable_diffusion/5c7dafdae0fe51e1a8cef26c0f34c02a6c1c5736_2000x2000.webp"
           alt="Ram Lalla Murti"
-          className="w-full h-[34rem]"
+          className="w-full h-[18rem] sm:h-[24rem] lg:h-[34rem] object-cover"
         />
       </div>
-      <div className="flex max-w-7xl mx-auto mt-14 gap-8 m-2 w-full">
-        <div className="font-serif">
+      <div className="flex flex-col lg:flex-row  lg:max-w-7xl lg:mx-auto mt-14 gap-8 m-2">
+        <div className="font-serif mx-auto px-4">
           <h1 className="text-3xl font-serif font-semibold text-[#6E2408] ">
             Shri. Muralidhar Patwardhan
           </h1>
-          <p className="mt-2">
+          <p className="mt-2 text-md">
             My name is Muralidhar Patwardhan, and I have devoted the last 45
             years of my life in service to Shri Bindu Madhav Mandir in Varanasi.
             This sacred temple, dedicated to Lord Vishnu, is one of the most
@@ -46,17 +46,18 @@ function DanHeroSection() {
             seek the grace of Lord Vishnu.
           </p>
         </div>
-        <img
-          src="https://sribindumadhav.org/dan1.jpg"
-          alt="pandit"
-          className="rounded-2xl border border-gray-100 bg-white shadow-2xl w-full h-[29rem]"
-        />
+        <div>
+          <img
+            src="https://sribindumadhav.org/dan1.jpg"
+            alt="pandit"
+            className="object-cover rounded-2xl border border-gray-100 bg-white shadow-2xl lg:object-cover w-full lg:w-[40rem] h-[25rem]"
+          />
+        </div>
       </div>
       <div>
         <div>
           <FormSubmit />
         </div>
-
       </div>
     </div>
   );

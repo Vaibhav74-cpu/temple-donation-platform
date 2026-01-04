@@ -1,6 +1,6 @@
-import { Menu, X } from "lucide-react";
+import { Menu, Underline, X } from "lucide-react";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -15,19 +15,34 @@ const Navbar = () => {
         <div className="md:block hidden font-serif ">
           <ul className="flex gap-7 font-semibold text-lg text-[#B7410E]">
             <li>
-              <Link to="/" className=" hover:underline">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "underline" : "hover:underline"
+                }
+              >
                 HOME
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/puja" className=" hover:underline">
+              <NavLink
+                to="/puja"
+                className={({ isActive }) =>
+                  isActive ? "underline" : "hover:underline"
+                }
+              >
                 PUJA{" "}
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/dan" className=" hover:underline">
+              <NavLink
+                to="/dan"
+                className={({ isActive }) =>
+                  isActive ? "underline" : " hover:underline"
+                }
+              >
                 DAN
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -36,11 +51,11 @@ const Navbar = () => {
         </button>
       </div>
       {open && (
-        <ul className="flex gap-7 font-semibold text-lg text-[#B7410E]">
+        <ul className="flex flex-col gap-6 py-2 px-2 font-semibold text-lg text-[#B7410E]">
           <li>
             <Link
               to="/"
-              className=" hover:underline"
+              className="block hover:underline"
               onClick={() => setOpen(false)}
             >
               HOME
@@ -49,7 +64,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/puja"
-              className=" hover:underline"
+              className="block hover:underline"
               onClick={() => setOpen(false)}
             >
               PUJA{" "}
@@ -58,7 +73,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/dan"
-              className=" hover:underline"
+              className="w-full hover:underline"
               onClick={() => setOpen(false)}
             >
               DAN

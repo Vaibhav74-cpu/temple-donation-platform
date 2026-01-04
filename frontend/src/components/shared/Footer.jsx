@@ -11,14 +11,14 @@ import React from "react";
 function Footer() {
   return (
     <div className="bg-gradient-to-t from-orange-300 to-yellow-00 mt-14">
-      <div className="flex flex-col md:flex-row gap-10 md:gap-24 justify-between">
+      <div className="flex flex-col md:flex-row gap-10 md:gap-24 justify-between lg:max-w-7xl lg:mx-auto">
         <div>
           <div>
             <h3 className="text-2xl font-serif text-[#6E2408] font-bold">
               Sri Bindu Madhav Mandir, Kashi
             </h3>
           </div>
-          <div className="flex flex-col md:flex-row gap-3 md:gap-3 mt-4">
+          <div className="flex md:flex-row gap-3 md:gap-3 mt-4">
             <a href="https://www.linkedin.com/feed/" target="_blank">
               {" "}
               <LinkedinIcon className=" border border-gray-600 border-t-2  rounded-lg p-1 h-10 w-10 " />
@@ -41,7 +41,7 @@ function Footer() {
             </a>
           </div>
         </div>
-        <div className="mb-11">
+        <div className="">
           <h2 className="font-bold font-serif text-xl">Quick Links</h2>
           <p className="text-gray-600 text-md font-serif mt-1 font-semibold">
             Puja Seva

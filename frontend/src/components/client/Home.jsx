@@ -8,7 +8,7 @@ import Footer from "../shared/Footer";
 
 function Home() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Navbar />
       <Herosection />
       <About />

@@ -14,7 +14,7 @@ function Sevek() {
         <img
           src="https://png.pngtree.com/thumb_back/fh260/background/20240930/pngtree-happy-diwali-festival-with-diya-oil-lamp-and-floral-mandala-on-image_16291370.jpg"
           alt="sevek"
-          className="w-full h-[32rem] bg-opacity-90"
+          className="w-full h-[22rem] bg-opacity-90 object-cover overflow-hidden"
         />
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute inset-0 text-center text-white ">
@@ -46,22 +46,22 @@ function Sevek() {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-4  mt-16">
-        <div className="flex gap-6">
-          <div className="">
+      <div className="flex flex-col  mt-16 lg:flex-row max-w-7xl mx-auto" >
+        <div className="flex flex-col lg:flex-row ">
+          <div className="w-full">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.6788639566116!2d79.14560759999999!3d21.137355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c7634eb00755%3A0xadfbb9674ee9623f!2sBAPS%20Shri%20Swaminarayan%20Mandir%2C%20Nagpur!5e1!3m2!1sen!2sin!4v1767010618695!5m2!1sen!2sin"
-              width="600"
-              height="450"
+              // width="600"
+              // height="450"
               // style={"border:0;"}
-              className="border-0 rounded-lg h-[20rem] w-[32rem] border-gray-600 shadow-lg"
-              allowfullscreen=""
+              className="px-2 border-0 rounded-2xl h-[20rem] w-[30rem] border-gray-600 shadow-lg object-cover"
+              allowFullScreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-          <div cl>
-            <p className="font-semibold font-serif mt-2">
+          <div className="mt-16 lg:mt-0 px-2">
+            <p className="font-semibold font-serif">
               Visit the Most Renowned
             </p>
             <h1 className=" text-5xl text-wrap font-bold font-serif text-[#6E2408] mt-6">

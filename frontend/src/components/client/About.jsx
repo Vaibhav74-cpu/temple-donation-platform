@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 function About() {
   return (
     <div className="max-w-7xl mx-auto mt-10 gap-4 m-2">
-      <div className="flex ">
+      <div className="flex flex-col lg:flex-row">
         <div>
           <p className="text-gray-500 font-semibold">About & History</p>
           <hr className="border-t-2 m-2" />
@@ -37,7 +37,7 @@ function About() {
           <img
             src="https://i.pinimg.com/736x/ef/5d/c5/ef5dc54ca08475e7b9bc8926559a0e56.jpg"
             alt="idol"
-            className="rounded-2xl border border-gray-100 bg-white shadow-2xl"
+            className="rounded-2xl border border-gray-100 bg-white shadow-2xl object-cover py-3 px-2 "
           />
         </div>
       </div>
