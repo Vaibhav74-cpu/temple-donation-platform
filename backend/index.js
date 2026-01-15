@@ -4,11 +4,14 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import connectDB from "./utils/db.js";
 import userRoute from "./routes/user.routes.js";
+import adminRoutes from "./routes/admin.routes.js";
 dotenv.config();
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+
 app.use(cookieParser());
 const corsOptions = {
   origin: "http://localhost:5173",
@@ -16,14 +19,10 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-// app.get("/", (req, res) => {
-//   return res.status(200).json({
-//     message: "i am comming from backend",
-//     success: true,
-//   });
-// });
+// app.use(cors())
 
 app.use("/api/v1/user", userRoute);
+app.use("/api/v1/admin", adminRoutes);
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {

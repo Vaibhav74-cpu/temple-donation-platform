@@ -8,20 +8,22 @@ export const userData = async (req, res) => {
     const file = req.file;
     if (!fullname || !phoneNumber || !email || !amount || !danDate) {
       return res.status(400).json({
-        message: "something is missing",
         success: false,
+        message: "Please fill all required fields",
       });
     }
 
     const donor = await User.findOne({ email });
-    if (donor) {
+    const name = await User.findOne({ fullname });
+    if (donor || name) {
       return res.status(400).json({
-        message: "donor is already exist",
         success: false,
+        message: "donor is already exist",
       });
     }
     if (!file) {
       return res.status(400).json({
+        success: false,
         message: "File is missing",
       });
     }
@@ -36,12 +38,16 @@ export const userData = async (req, res) => {
       danDate,
       paymentPhoto: cloudResponse.secure_url,
     });
-    return res.status(200).json({
+    return res.status(201).json({
       success: true,
       message: "Data submitted succesfully",
       user,
     });
   } catch (error) {
     console.log(error);
+    return res.status(500).json({
+      success: false,
+      message:"internal server error"
+    })
   }
 };
