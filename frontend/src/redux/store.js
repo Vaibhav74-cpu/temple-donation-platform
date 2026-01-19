@@ -1,6 +1,6 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import userReducer from "../redux/userSlice.js";
-
+import adminReducer from "../redux/adminSlice.js";
 import {
   persistStore,
   persistReducer,
@@ -22,6 +22,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   user: userReducer,
+  admin: adminReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

@@ -5,7 +5,7 @@ import DanHeroSection from "./DanHeroSection";
 
 function Dan() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="">
       <Navbar />
       <DanHeroSection />
       <Footer />

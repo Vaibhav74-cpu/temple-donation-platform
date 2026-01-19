@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import { Provider } from "react-redux";
 import { persistor, store } from "./redux/store";
 import { PersistGate } from "redux-persist/integration/react";
+import { Toaster } from "sonner";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -13,5 +14,6 @@ createRoot(document.getElementById("root")).render(
         <App />
       </PersistGate>
     </Provider>
+    <Toaster />
   </StrictMode>
 );

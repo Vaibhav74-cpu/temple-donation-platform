@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="sticky top-0 z-40 bg-white/80  backdrop-blur-md">
+    <div className=" top-0 z-40 bg-white/80  backdrop-blur-md lg:sticky lg:top-0 lg:z-40">
       <div className="flex max-w-7xl justify-between h-16 mx-auto items-center">
         <div>
           <h1 className="text-2xl md:text-3xl font-bold text-[#7b2a0d]">
@@ -44,6 +44,16 @@ const Navbar = () => {
                 DAN
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/admin/login"
+                className={({ isActive }) =>
+                  isActive ? "underline" : " hover:underline"
+                }
+              >
+                ADMIN
+              </NavLink>
+            </li>
           </ul>
         </div>
         <button className="md:hidden" onClick={() => setOpen(!open)}>
@@ -78,6 +88,16 @@ const Navbar = () => {
             >
               DAN
             </Link>
+          </li>
+          <li>
+            <NavLink
+              to="/admin/login"
+              className={({ isActive }) =>
+                isActive ? "underline" : " hover:underline"
+              }
+            >
+              ADMIN
+            </NavLink>
           </li>
         </ul>
       )}

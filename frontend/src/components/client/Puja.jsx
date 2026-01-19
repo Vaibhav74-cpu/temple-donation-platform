@@ -9,7 +9,7 @@ import Reviews from "./Reviews";
 
 function Puja() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="">
       <Navbar />
       <PujaHeroSection />
       <ParticipateProcess />

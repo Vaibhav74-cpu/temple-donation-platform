@@ -5,6 +5,8 @@ import { RouterProvider } from "react-router";
 import Home from "./components/client/Home";
 import Dan from "./components/client/Dan";
 import Puja from "./components/client/Puja";
+import AdminPage from "./components/Admin/AdminPage";
+import AdminGetUsers from "./components/Admin/AdminGetUsers";
 
 
 const appRouter = createBrowserRouter([
@@ -18,6 +20,16 @@ const appRouter = createBrowserRouter([
   },{
     path:'/puja',
     element:<Puja/>
+  },
+
+  //admin
+  {
+    path:'/admin/login',
+    element:<AdminPage/>
+  },
+  {
+    path:'/admin/login/get',
+    element:<AdminGetUsers/>
   }
 ]);
 
