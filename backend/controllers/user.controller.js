@@ -30,7 +30,7 @@ export const userData = async (req, res) => {
     const fileUri = getDataUri(file);
     const cloudResponse = await cloudinary.uploader.upload(fileUri.content);
 
-    const user = await User.create({
+    const donors = await User.create({
       fullname,
       phoneNumber,
       email,
@@ -38,16 +38,15 @@ export const userData = async (req, res) => {
       danDate,
       paymentPhoto: cloudResponse.secure_url,
     });
-    return res.status(201).json({
+    return res.status(200).json({
       success: true,
-      message: "Data submitted succesfully",
-      user,
+      donors,
     });
   } catch (error) {
     console.log(error);
     return res.status(500).json({
       success: false,
-      message:"internal server error"
-    })
+      message: "internal server error",
+    });
   }
 };
